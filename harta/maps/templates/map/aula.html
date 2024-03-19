@@ -1,0 +1,12 @@
+
+{% for articol in articole %}
+  <div class="articol">
+    <h2>{{ articol.title }}</h2>
+    <!-- Alte detalii ale articolului -->
+    <p>{{ articol.short_description }}</p>
+    {% if articol.image_url %}
+      <img src="{{ articol.image_url }}" alt="Imagine articol">
+    {% endif %}
+    <a href="{{ articol.article_url }}" target="_blank">Citește mai mult</a>
+  </div>
+{% endfor %}
